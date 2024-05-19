@@ -27,8 +27,9 @@ public class LoginTest extends BaseSetup {
         validate = new Validate(driver);
         ExtentSparkReporter spark = new ExtentSparkReporter("targer/report.html");
         extent.attachReporter(spark);
+        System.out.println("alo");
     }
-    @Test
+    @Test(description = "Login page with user name and password")
     public void loginPage() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         test = extent.createTest("Login page","This test login with user name and password");
